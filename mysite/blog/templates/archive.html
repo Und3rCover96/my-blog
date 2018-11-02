@@ -1,0 +1,16 @@
+{% extends "parent/main.html" %}
+{%block title%}
+  {{super}} archives
+{%endblock%}
+
+{% block body%}
+
+    {% if year_archive_posts %}
+      {% for post in year_archive_posts %}
+        {{ post.title }}
+      {% endfor%}
+    {%else%}
+      no posts are available
+    {%endif%}
+
+{% endblock%}

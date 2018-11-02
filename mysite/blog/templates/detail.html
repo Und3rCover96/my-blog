@@ -1,0 +1,9 @@
+{% extends "parent/main.html" %}
+{%block title%}
+  {{super}} detail
+{%endblock%}
+{% block body%}
+    <h1>This is my site</h1>
+    <h2>{{ post.title}}</h2>
+    <h3>{{ post.body}}</h3>
+{% endblock %}

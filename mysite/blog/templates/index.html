@@ -1,0 +1,19 @@
+{% extends "parent/main.html" %}
+{%block title%}
+  {{super}} Blog
+{%endblock%}
+
+{% block body%}
+  <h1>All Posts</h1>
+  {% if latest_posts_list %}
+    <ul>
+      {% for post in latest_posts_list%}
+          <li><a href="{% url 'blog:detail' post.id  %}"> {{post.slug}} </a></li>
+      {% endfor%}
+    </ul>
+  {% else %}
+      <p><style media="screen">
+        no post are availble
+      </style></p>
+  {% endif%}
+{% endblock%}
